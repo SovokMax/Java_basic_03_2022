@@ -1,18 +1,15 @@
 package ru.itone.otushw.homework6;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Bank {
-    private Map<Client, List<Account>> clientAccounts = new HashMap<>();
+    private Map<Client, List<Account>> clientToAccountsАssociation = new HashMap<>();
     private Map<Account, Client> accountClient = new HashMap<>();
 
     public List<Account> getAccounts(Client client) {
-       return clientAccounts.get(client);
+       return clientToAccountsАssociation.get(client);
     }
-
-
-
+    
     public Client findClient(Account account){
         return accountClient.get(account);
 
@@ -24,7 +21,7 @@ public class Bank {
     }
 
     public void addClient(Client client) {
-        clientAccounts.put(client, new ArrayList<>());
+        clientToAccountsАssociation.put(client, new ArrayList<>());
     }
 
     public void addClient(Client client, List<Account> account) {

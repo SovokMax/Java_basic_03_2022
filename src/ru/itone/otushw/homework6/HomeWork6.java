@@ -11,7 +11,6 @@ public class HomeWork6 {
         bank.addClient(client2);
 
         Account account = new Account("account1");
-
         bank.addClientAccount(client, account);
         bank.addClientAccount(client2, account);
         Client client1 = bank.findClient(account);

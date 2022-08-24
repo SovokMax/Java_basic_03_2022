@@ -1,7 +1,6 @@
 package ru.itone.otushw.homework5;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Sort {
 
@@ -26,9 +25,18 @@ public class Sort {
         //System.out.println(list);
 
         SortUtil sortUtil = new SortUtil();
+        Date start = new Date();
         sortUtil.bubbleSorter(list);
         for (int i = 0; i < list.size(); i++){
             System.out.println(list.get(i));
         }
+        Date end = new Date();
+        System.out.println("Sort time: " + (end.getTime() - start.getTime()));
+
+
+        Date start2 = new Date();
+        Collections.sort(list);
+        Date end2 = new Date();
+        System.out.println("Sort time fast: " + (end2.getTime() - start2.getTime()));
     }
 }
