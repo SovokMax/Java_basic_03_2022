@@ -1,5 +1,7 @@
 package ru.itone.otushw.homework4;
 
+import java.util.Objects;
+
 public class Question {
     private String question;
     private String answer;
