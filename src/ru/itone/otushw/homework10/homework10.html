@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homework 10</title>
+	<script src="homework10.js"></script>
+	<style>
+		.styleForm {
+            border-style: double;
+			border-width: 1px;
+			border-color: rgb(27, 100, 189);
+			padding: 10px;
+			width: 500px;
+			height: 170px;
+		}
+		.styleForm div {
+			margin: 20px;
+		}
+		.styleForm input, select
+		{
+			float: right;
+			width: 300px;
+		}
+
+	</style>
+</head>
+<body>
+    <h2>
+		Форма добавления информации о студенте
+	</h2>
+<div class="styleForm">
+	<form name="students">
+		<div>
+			<label for="fullnameId">Имя студента:</label>
+			<input id="fullnameId" name="fullname" type="text" value="Максим Максимович Максимов">
+		</div>
+		<div>
+			<label for="datePicker">Дата рождения:</label>
+			<input id="datePicker" name="birthDate" type="date" value="1988-12-01">
+		</div>
+		<div>
+			<label>
+				Пол:
+				<select id="genderId" name="gender">
+					<option value="Мужчина" selected>Мужчина</option>
+					<option value="Женщина">Женщина</option>
+				</select>
+			</label>
+		</div>
+        <div>
+            <input type="button" class="ui-button" value="Добавить" 
+                       onclick='addField(buildPerson(fullname.value, gender.value, birthDate.value))'/>
+            </div>
+	</form>
+</div>
+<table id="resultTable" cellpadding="2" bordercolor="blue" border="1">
+	<h2>
+		Таблица студентов
+	</h2>
+        <tr>
+            <td width="400">Имя студента</td>
+            <td width="100">Пол</td>
+            <td width="150">Дата рождения</td>
+            <td width="100">Возраст</td>
+        </tr>
+        <tr>
+            <td colspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="3">Средний возраст студентов</td>
+            <td class="resultAge"></td>
+        </tr>
+</table>
+</body>
+</html>
+
