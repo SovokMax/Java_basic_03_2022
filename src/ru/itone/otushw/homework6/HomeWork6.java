@@ -15,7 +15,7 @@ public class HomeWork6 {
         bank.addClientAccount(client2, account);
         Client client1 = bank.findClient(account);
         System.out.println();
-        List<Account> accounts = bank.getAccounts(client);
-        System.out.println();
+        List<Account> accounts = bank.getAccounts(new Client("Максим", 33));
+        System.out.println(accounts);
     }
 }
